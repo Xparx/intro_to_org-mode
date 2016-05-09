@@ -85,10 +85,11 @@ print tabel
 matplot(matrix(rnorm(100), 10), type="l")
 #+END_SRC
 
-#+caption: This is a caption
+
+#+caption: This is a caption. This section can be put anywhere in the document and the figure will be located there.
 #+attr_org: :width 200px
 #+RESULTS: random_lines
-[[file:myplot.png]]
+
 
 ** Export
 
