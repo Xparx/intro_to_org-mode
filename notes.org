@@ -1,0 +1,97 @@
+# -*- org-export-babel-evaluate: nil; -*-
+#+OPTIONS: tags:nil tex:t toc:nil todo:t H:3 num:nil email:nil
+#+LATEX_CMD: pdflatex
+#+TITLE: Org-mode example usage
+#+EMAIL: andreas.tjarnberg@liu.se
+
+* Introduction to org                                         :orgmode:start:
+:PROPERTIES:
+:CUSTOM_ID: sec:Introduction
+:END:
+
+My emacs config on github: [[https://github.com/Xparx/emacs-init][Xparx/emacs-init]]
+
+** Org mode is
+- for keeping notes
+- maintaining TODO lists
+- planning projects
+- and authoring documents
+
+with a fast and effective plain-text system
+/Created by Carsten Dominik in 2003, maintained by Bastien Guerry and developed by many others./
+
+- org-mode is a type of markup. [fn:1]
+
+** Document structure                                             :structure:
+:PROPERTIES:
+:exports: results
+:END:
+
+Examples:
+- Headers of different levels are marked with the corresponding number of _*_
+- Headers can have ~TODO~ priorities ~[#A-C]~ and ~tags~
+- Text formating with _underline_, *bold*, /cursive/, =code=.
+- src code blocks /.e.g/: src_python{return (1+1)}
+- [[#sec:agenda][links]] to other objects like headers, webpages, images etc are possible
+
+** Agenda and TODO items
+:PROPERTIES:
+:CUSTOM_ID: sec:agenda
+:END:
+
+- Keeping track of your todo lists.
+
+*** TODO We want to do this
+put at front of agenda file =C-c [=.
+
+*** DONE And this is something we done.
+
+** Src code
+
+#+name: list_files
+#+begin_src sh
+ls
+#+end_src
+
+#+RESULTS: list_files
+| auto      |
+| notes.org |
+| notes.pdf |
+| notes.tex |
+
+*** remote execution
+
+#+begin_src sh :dir /x_andtj@gamma.nsc.liu.se:
+echo `hostname`
+#+end_src
+
+*** Passing data to code block 
+
+#+begin_src python :results output :var tabel=list_files
+print tabel
+#+end_src
+
+*** plotting
+
+#+name: random_lines
+#+BEGIN_SRC R :file myplot.png :exports results :results graphics
+matplot(matrix(rnorm(100), 10), type="l")
+#+END_SRC
+
+** Export
+
+- html
+- pdf through latex
+- any other through =pandoc=
+
+** My current org-files
+- [[file:/home/andtj33/projects/MS-project/notebook.org][MS project notebook]]
+
+- [[file:~/research/bib-notes.org][research notes]]
+
+- [[file:~/notebook/notes.org][notebook]]
+
+* Footnotes
+
+[fn:1] There are many kinds.
+
