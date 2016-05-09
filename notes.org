@@ -100,12 +100,12 @@ matplot(matrix(rnorm(100), 10), type="l")
 [[cite:Tjarnberg2014]]
 
 
-* Bibliography                                                       :ignore:
+* Bibliography, require org-ref to work                              :ignore:
 
 [[bibliography:~/research/bibliography.bib]]
 [[bibliographystyle:plain]]
 
 * Footnotes
 
-[fn:1] There are many kinds.
+[fn:1] There are many kinds, [[https://en.wikipedia.org/wiki/Markup_language][Markup language - Wikipedia, the free encyclopedia]]
 
